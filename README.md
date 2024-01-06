@@ -1,18 +1,9 @@
 # linorobot2
 ![linorobot2](docs/linorobot2.gif)
 
-linorobot2 is a ROS2 port of the [linorobot](https://github.com/linorobot/linorobot) package. If you're planning to build your own custom ROS2 robot (2WD, 4WD, Mecanum Drive) using accessible parts, then this package is for you. This repository contains launch files to easily integrate your DIY robot with Nav2 and a simulation pipeline to run and verify your experiments on a virtual robot in Gazebo. 
+linorobot2 is a ROS2 port of the [linorobot](https://github.com/linorobot/linorobot) package. The goal of the Linorobot2 is to provide a start point for an autonomously driving DIY robot which is made using accessible parts. So if you're planning to build your own custom ROS2 robot (2WD, 4WD, Mecanum Drive), then this package is for you. This repository contains all things needed starting from the hardware list to how to get the robot set-up and running. 
 
-Once the robot's URDF has been configured in linorobot2_description package, users can easily switch between booting up the physical robot and spawning the virtual robot in Gazebo. 
-
-![linorobot2_architecture](docs/linorobot2_launchfiles.png)
-
-Assuming you're using one of the tested sensors, linorobot2 automatically launches the necessary hardware drivers, with the topics being conveniently matched with the topics available in Gazebo. This allows users to define parameters for high level applications (ie. Nav2 SlamToolbox, AMCL) that are common to both virtual and physical robots.
-
-The image below summarizes the topics available after running **bringup.launch.py**.
-![linorobot2_microcontroller](docs/microcontroller_architecture.png)
-
-An in-depth tutorial on how to build the robot is available in [linorobot2_hardware](https://github.com/linorobot/linorobot2_hardware).
+An in-depth tutorial on the neccessary hardware and how to build the robot is available in [linorobot2_hardware](https://github.com/NTheuws/linorobot2_hardware).
 
 ## Installation 
 This package requires ros-foxy or ros-galactic. If you haven't installed ROS2 yet, you can use this [installer](https://github.com/linorobot/ros2me) script that has been tested to work on x86 and ARM based dev boards ie. Raspberry Pi4/Nvidia Jetson Series. 
