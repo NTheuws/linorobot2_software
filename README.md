@@ -5,6 +5,14 @@ linorobot2 is a ROS2 port of the [linorobot](https://github.com/linorobot/linoro
 
 An in-depth tutorial on the neccessary hardware and how to build the robot is available in [linorobot2_hardware](https://github.com/NTheuws/linorobot2_hardware). In case you're planning on building a Linorobot2 yourself, it is recommended to go to this page and select and gather all the hardware required. Once this is done the guide can be followed step by step starting from Installation down below.
 
+## Table of Contents  
+- [Installation](#installation)
+- [Hardware and Robot Firmware](#hardware-and-robot-firmware)
+- [URDF](#urdf)
+- [Quickstart](#quickstart)
+- [Troubleshooting Guide](#troubleshooting-guide)
+- [Useful Resources](#useful-resources)
+
 ## Installation 
 This package requires ros-foxy, galactic, humble or rolling. If you haven't installed ROS2 yet, you can use this [installer](https://github.com/linorobot/ros2me) script that has been tested to work on x86 and ARM based dev boards ie. Raspberry Pi4/Nvidia Jetson Series. 
 
