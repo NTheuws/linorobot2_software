@@ -17,6 +17,10 @@ The easiest way to install this package on the robot computer is to run the bash
     bash install_linorobot2.bash <robot_type> <laser_sensor> <depth_sensor>
     source ~/.bashrc
 
+in this installation, replace the options including the <> with the following:
+an example would be: 
+`bash install_linorobot2.bash mecanum ldlidar realsense`
+
 robot_type:
 - `2wd` - 2 wheel drive robot.
 - `4wd` - 4 wheel drive robot.
@@ -127,7 +131,7 @@ The `rviz` argument on description.launch.py won't work on headless setup but yo
     ros2 launch linorobot2_viz robot_model.launch.py
 
 ## Quickstart
-All commands below are to be run on the robot computer unless you're running a simulation or rviz2 to visualize the robot remotely from the host machine. SLAM and Navigation launch files are the same for both real and simulated robots in Gazebo.
+All commands below are to be run on the robot computer unless you're running a simulation or rviz2 to visualize the robot remotely from the host machine. SLAM and Navigation launch files are the same for both real and simulated robots in Gazebo. Additionally, if you've got a connection set up between the robot computer and the host machine, you can run the commands on the robot computer through the host machine.
 
 ### 1. Booting up the robot
 
@@ -250,6 +254,7 @@ navigation.launch.py will continue to throw this error `Timed out waiting for tr
 
 
 ## Troubleshooting Guide
+In case the issue can not be found here, see if it's been described on the [hardware page](https://github.com/NTheuws/linorobot2_hardware/blob/rolling/README.md#troubleshooting-guide)
 
 #### 1. The changes I made on a file are not taking effect on the package configuration/robot's behavior.
 - You need to build your workspace every time you modify a file:
