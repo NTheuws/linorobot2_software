@@ -94,7 +94,7 @@ Install [linorobot2_viz](https://github.com/linorobot/linorobot2_viz) package to
     source install/setup.bash
 
 ## Hardware and Robot Firmware
-All the hardware documentation and robot microcontroller's firmware can be found [here](https://github.com/linorobot/linorobot2_hardware).
+Next up it's time to properly start on the robot itself. All the hardware documentation and robot microcontroller's firmware can be found [here](https://github.com/linorobot/linorobot2_hardware). When it comes to assembling the robot, since its a DIY robot, all versions made will be different from eachother. Because of this it's impossible to give a step by step run down of how to build it from the ground up. Each step is generalized to offer as much guidance as possible. In case examples are used also make sure to compare your own choice of hardware with the example and make adjustments wherever neccessary.
 
 ## URDF
 ### 1. Define robot properties
