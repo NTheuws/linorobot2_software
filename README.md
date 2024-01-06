@@ -72,6 +72,7 @@ Set LINOROBOT2_BASE env variable to the type of robot base used. Available env v
 You can skip the next step (Host Machine - RVIZ Configurations) since this package already contains the same RVIZ configurations to visualize the robot. 
 
 ### 3. Host Machine - RVIZ Configurations
+Make sure to download this on the host machine and not the robot computer. This package has been separated to minimize the installation required on the robot computer. The use of RZIV is te be able to visualize the robot and it's surroundings while the map is being created. This can also later be used to initialize/send goal poses to the robot to enable it 
 Install [linorobot2_viz](https://github.com/linorobot/linorobot2_viz) package to visualize the robot remotely specifically when creating a map or initializing/sending goal poses to the robot. The package has been separated to minimize the installation required if you're not using the simulation tools on the host machine.
 
     cd <host_machine_ws>
