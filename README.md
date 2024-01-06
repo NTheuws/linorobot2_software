@@ -3,13 +3,13 @@
 
 linorobot2 is a ROS2 port of the [linorobot](https://github.com/linorobot/linorobot) package. The goal of the Linorobot2 is to provide a start point for an autonomously driving DIY robot which is made using accessible parts. So if you're planning to build your own custom ROS2 robot (2WD, 4WD, Mecanum Drive), then this package is for you. This repository contains all things needed starting from the hardware list to how to get the robot set-up and running. 
 
-An in-depth tutorial on the neccessary hardware and how to build the robot is available in [linorobot2_hardware](https://github.com/NTheuws/linorobot2_hardware).
+An in-depth tutorial on the neccessary hardware and how to build the robot is available in [linorobot2_hardware](https://github.com/NTheuws/linorobot2_hardware). In case you're planning on building a Linorobot2 yourself, it is recommended to go to this page and select and gather all the hardware required. Once this is done the guide can be followed step by step starting from Installation down below.
 
 ## Installation 
-This package requires ros-foxy or ros-galactic. If you haven't installed ROS2 yet, you can use this [installer](https://github.com/linorobot/ros2me) script that has been tested to work on x86 and ARM based dev boards ie. Raspberry Pi4/Nvidia Jetson Series. 
+This package requires ros-foxy, galactic, humble or rolling. If you haven't installed ROS2 yet, you can use this [installer](https://github.com/linorobot/ros2me) script that has been tested to work on x86 and ARM based dev boards ie. Raspberry Pi4/Nvidia Jetson Series. 
 
 ### 1. Robot Computer - linorobot2 Package
-The easiest way to install this package on the robot computer is to run the bash script found in this package's root directory. It will install all the dependencies, set the ENV variables for the robot base and sensors, and create a linorobot2_ws (robot_computer_ws) on the robot computer's `$HOME` directory. If you're using a ZED camera with a Jetson Nano, you must create a custom Ubuntu 20.04 image for CUDA and the GPU driver to work. Here's a quick [guide](./ROBOT_INSTALLATION.md#1-creating-jetson-nano-image) on how to create a custom image for Jetson Nano.
+The easiest way to install this package on the robot computer is to run the bash script found in this package's root directory. It will install all the dependencies, set the ENV variables for the robot base and sensors, and create a linorobot2_ws (robot_computer_ws) on the robot computer's `$HOME` directory. To do this follow the steps below. Alternatively, if you're using a ZED camera with a Jetson Nano, you must create a custom Ubuntu 20.04 image for CUDA and the GPU driver to work. Here's a quick [guide](./ROBOT_INSTALLATION.md#1-creating-jetson-nano-image) on how to create a custom image for Jetson Nano.
 
     source /opt/ros/<ros_distro>/setup.bash
     cd /tmp
@@ -34,7 +34,7 @@ laser_sensor:
 - `zedm` - * [Zed Mini](https://www.stereolabs.com/zed-mini) 
 - `-` - If the robot's sensor is not listed above.
 
-Sensors marked with an asterisk are depth sensors. If a depth sensor is used as a laser sensor, the launch files will run [depthimage_to_laserscan](https://github.com/ros-perception/depthimage_to_laserscan) to convert the depth sensor's depth image to laser scans.
+Sensors marked with an asterisk are depth sensors. If a depth sensor is used as a laser sensor, the launch files will run [depthimage_to_laserscan](https://github.com/ros-perception/depthimage_to_laserscan) to convert the depth sensor's depth image to laser scans. As long as the right sensor has been configured correctly, you won't have to change anything yourself.
 
 depth_sensor:
 - `realsense` - [Intel RealSense](https://www.intelrealsense.com/stereo-depth/) D435, D435i
@@ -50,7 +50,7 @@ depth_sensor:
 Alternatively, follow this [guide](./ROBOT_INSTALLATION.md) to do the installation manually.
 
 ### 2. Host Machine / Development Computer - Gazebo Simulation (Optional)
-This step is only required if you plan to use Gazebo later. This comes in handy if you want to fine-tune parameters (ie. SLAM Toolbox, AMCL, Nav2) or test your applications on a virtual robot. 
+Gazebo is a simulation which enables you to run the application on a virtual robot. This is mainly used for fine-tuning paramaters (ie. SLAM Toolbox, AMCL, Nav2) or testing the application. This step is entirely optional and in case you're not planning on using it in the future, feel free to skip forward to 3. Host machine - RVIZ configurations.
 
 #### 2.1 Install linorobot2 Package
 Install linorobot2 package on the host machine:
