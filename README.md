@@ -1,7 +1,7 @@
 # linorobot2
-linorobot2 is a ROS2 port of the [linorobot](https://github.com/linorobot/linorobot) package. The goal of the Linorobot2 is to provide a starting point for an autonomously driving DIY (Do It Yourself) robot, which is made using accessible parts. So if you're planning to build your own custom ROS2 robot (2WD, 4WD, Mecanum Drive), then this package is for you. 
+linorobot2 is a ROS2 port of the [linorobot](https://github.com/linorobot/linorobot) package. The goal of the Linorobot2 is to provide a starting point for an autonomously driving DIY (Do It Yourself) robot, which is made using accessible parts. So if you're planning to build your own custom ROS2 robot, then this package is for you. 
 
-This repository contains all things needed, from the hardwarecomponent list to how to get the robot set-up and running. Eventually you'll be able to make the robot drive around on it's own, set start/end points and have it automatically avoid obstacles on its path.
+This repository contains all things needed, from the hardware component list to how to get the robot set-up and running. Eventually you'll be able to make the robot drive around on it's own, set start/end points and have it automatically avoid obstacles on its path.
 
 ![linorobot2](docs/linorobot2.gif)
 
@@ -18,7 +18,7 @@ An in-depth tutorial on the neccessary hardware and how to build the robot is av
 ## Installation 
 This package requires ros-foxy, galactic, humble or rolling. If you haven't installed ROS2 yet, you can use this [installer](https://github.com/linorobot/ros2me) script that has been tested to work on x86 and ARM based dev boards ie. Raspberry Pi4/Nvidia Jetson Series. 
 
-### 1. Robot Computer - linorobot2 Package
+### 1. [Robot Computer](https://github.com/NTheuws/linorobot2_hardware#18-robot-computer) - linorobot2 Package
 The easiest way to install this package on the robot computer is to run the bash script found in this package's root directory. It will install all the dependencies, set the ENV variables for the robot base and sensors, and create a linorobot2_ws (robot_computer_ws) on the robot computer's `$HOME` directory. To do this follow the steps below. Alternatively, if you're using a ZED camera with a Jetson Nano, you must create a custom Ubuntu 20.04 image for CUDA and the GPU driver to work. Here's a quick [guide](./ROBOT_INSTALLATION.md#1-creating-jetson-nano-image) on how to create a custom image for Jetson Nano.
 
     source /opt/ros/<ros_distro>/setup.bash
@@ -27,7 +27,7 @@ The easiest way to install this package on the robot computer is to run the bash
     bash install_linorobot2.bash <robot_type> <laser_sensor> <depth_sensor>
     source ~/.bashrc
 
-in this installation, replace the options including the <> with the following:
+in this installation, replace the options including the <> with the following;
 an example would be: 
 `bash install_linorobot2.bash mecanum ldlidar realsense`
 
@@ -96,11 +96,13 @@ Install [linorobot2_viz](https://github.com/linorobot/linorobot2_viz) package to
     source install/setup.bash
 
 ## Hardware and Robot Firmware
-Next up it's time to properly start on the robot itself. All the hardware documentation and robot microcontroller's firmware can be found [here](https://github.com/linorobot/linorobot2_hardware). When it comes to assembling the robot, since its a DIY robot, all versions made will be different from eachother. Because of this it's impossible to give a step by step run down of how to build it from the ground up. Each step is generalized to offer as much guidance as possible. In case examples are used also make sure to compare your own choice of hardware with the example and make adjustments wherever neccessary.
+Next up it's time to properly start on the robot itself. All the hardware documentation and robot microcontroller's firmware can be found [on the hardware page](https://github.com/NTheuws/linorobot2_hardware). When it comes to assembling the robot, since its a DIY robot, all versions made will be different from eachother. Because of this it's impossible to give a step by step run down of how to build it from the ground up. Each step is generalized to offer as much guidance as possible. In case examples are used make sure to compare your own choice of hardware with the example and make adjustments wherever neccessary. 
+
+Before continuing with the URDF you should install the necessities on the robot computer, following the guide on the [hardware page](https://github.com/NTheuws/linorobot2_hardware#installation)
 
 ## URDF
 
-This stands for unified robotics description format, and is used for simulations. In the URDF the dimensions of the robot will be written down. So for example either rviz or gazebo can use this to create a visualization. 
+URDF stands for Unified Robotics Description Format, and is used for simulations. In the URDF the dimensions of the robot will be written down. So for example either rviz or gazebo can use this to create a visualization. 
 
 ### 1. Define robot properties
 [linorobot2_description](./linorobot2_description) package has parameterized xacro files that can help you kickstart writing the robot's URDF. Open <robot_type>.properties.urdf.xacro in [linorobot2_description/urdf](./linorobot2_description/urdf) directory and change the values according to the robot's specification/dimensions. All pose definitions must be measured from the `base_link` (center of base) and wheel positions (ie `wheel_pos_x`) are referring to wheel 1.
