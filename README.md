@@ -265,7 +265,7 @@ navigation.launch.py will continue to throw this error `Timed out waiting for tr
 
 
 ## Troubleshooting Guide
-Here most of the issues encountered during the steps on this page will be described here. In case the issue can not be found here, see if it's  on the [hardware page](https://github.com/NTheuws/linorobot2_hardware/blob/rolling/README.md#troubleshooting-guide).
+Most of the issues encountered during the steps on this page will be described here. In case the issue can not be found here, see if it's  on the [hardware page](https://github.com/NTheuws/linorobot2_hardware/blob/rolling/README.md#troubleshooting-guide).
 
 #### 1. One of the installs is failing.
 - Make sure to not have skipped any previous steps.
