@@ -1,9 +1,9 @@
 # linorobot2
-![linorobot2](docs/linorobot2.gif)
-
 linorobot2 is a ROS2 port of the [linorobot](https://github.com/linorobot/linorobot) package. The goal of the Linorobot2 is to provide a start point for an autonomously driving DIY robot which is made using accessible parts. So if you're planning to build your own custom ROS2 robot (2WD, 4WD, Mecanum Drive), then this package is for you. This repository contains all things needed starting from the hardware list to how to get the robot set-up and running. 
 
-An in-depth tutorial on the neccessary hardware and how to build the robot is available in [linorobot2_hardware](https://github.com/NTheuws/linorobot2_hardware). In case you're planning on building a Linorobot2 yourself, it is recommended to go to this page and select and gather all the hardware required. Once this is done the guide can be followed step by step starting from Installation down below.
+![linorobot2](docs/linorobot2.gif)
+
+An in-depth tutorial on the neccessary hardware and how to build the robot is available in [linorobot2_hardware](https://github.com/NTheuws/linorobot2_hardware). In case you're planning on building a Linorobot2 yourself, it is recommended to go to this page to select and gather all the hardware required. Once this is done the guide can be followed step by step starting from Installation down below.
 
 ## Table of Contents  
 - [Installation](#installation)
