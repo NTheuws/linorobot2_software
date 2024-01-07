@@ -262,9 +262,13 @@ navigation.launch.py will continue to throw this error `Timed out waiting for tr
 
 
 ## Troubleshooting Guide
-In case the issue can not be found here, see if it's been described on the [hardware page](https://github.com/NTheuws/linorobot2_hardware/blob/rolling/README.md#troubleshooting-guide)
+Here most of the issues encountered during the steps on this page will be described here. In case the issue can not be found here, see if it's  on the [hardware page](https://github.com/NTheuws/linorobot2_hardware/blob/rolling/README.md#troubleshooting-guide).
 
-#### 1. The changes I made on a file are not taking effect on the package configuration/robot's behavior.
+#### 1. One of the installs is failing.
+- Make sure to not have skipped any previous steps.
+- Read the terminal and see what it says, it's likely there are some prerequisites or the error is described.  
+
+#### 2. The changes I made on a file are not taking effect on the package configuration/robot's behavior.
 - You need to build your workspace every time you modify a file:
 
     ```
@@ -273,14 +277,14 @@ In case the issue can not be found here, see if it's been described on the [hard
     #continue what you're doing...
     ```
 
-#### 2. [`slam_toolbox]: Message Filter dropping message: frame 'laser'`
+#### 3. [slam_toolbox]: Message Filter dropping message: frame 'laser'
 - Try to up `transform_timeout` by 0.1 in linorobot2_navigation/config/slam.yaml until the warning is gone.
 
 
-#### 3. `target_frame - frame does not exist`
+#### 4. target_frame - frame does not exist
 - Check your <robot_type>.properties.urdf.xacro and ensure that there's no syntax errors or repeated decimal points.
 
-#### 4. Weird microROS agent behavior after updating the Linux/ROS
+#### 5. Weird microROS agent behavior after updating the Linux/ROS
 - Don't forget to update the microROS agent as well after your updates. Just run:
     
     ```
