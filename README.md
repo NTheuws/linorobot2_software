@@ -219,16 +219,16 @@ For example:
 - **sim** - Set to true for simulated robots on the host machine. Default value is false.
 - **rviz** - Set to true to visualize the robot in RVIZ. Default value is false.
 
-#### 3.1 Run rviz2 to visualize the robot from host machine:
+#### 3.2 Run rviz2 to visualize the robot from host machine:
 The `rviz` argument on slam.launch.py won't work on headless setup but you can visualize the robot remotely from the host machine:
 
     ros2 launch linorobot2_viz slam.launch.py
 
-#### 3.2 Move the robot to start mapping
+#### 3.3 Move the robot to start mapping
 
 Drive the robot manually until the robot has fully covered its area of operation. Alternatively, you can use the `2D Goal Pose` tool in RVIZ to set an autonomous goal while mapping. More info [here](https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html).
 
-#### 3.3 Save the map
+#### 3.4 Save the map
 
     cd linorobot2/linorobot2_navigation/maps
     ros2 run nav2_map_server map_saver_cli -f <map_name> --ros-args -p save_map_timeout:=10000.
