@@ -8,6 +8,7 @@ This repository contains all things needed, from the hardware component list to 
 An in-depth tutorial on the neccessary hardware and how to build the robot is available in [linorobot2_hardware](https://github.com/NTheuws/linorobot2_hardware). In case you're planning on building a Linorobot2 yourself, it is recommended to go to this page to select and gather all the hardware required. Once this is done the guide can be followed step by step starting from Installation down below.
 
 ## Table of Contents  
+- [Workflow explanation](#workflow-explanation)
 - [Installation](#installation)
 - [Hardware and Robot Firmware](#hardware-and-robot-firmware)
 - [URDF](#urdf)
@@ -15,7 +16,23 @@ An in-depth tutorial on the neccessary hardware and how to build the robot is av
 - [Troubleshooting Guide](#troubleshooting-guide)
 - [Useful Resources](#useful-resources)
 
+## Workflow explanation
+
+This project is split into 2 repositories, the software page (this one) and the [hardware page](https://github.com/NTheuws/linorobot2_hardware). Both will be required to get the robot built, installed and configered. the steps you should follow to go through this are as follows:
+- [Select and gather the required hardware](https://github.com/NTheuws/linorobot2_hardware/blob/rolling/README.md#required-hardware) (hardware)
+- [Build the robot](https://github.com/NTheuws/linorobot2_hardware/blob/rolling/README.md#building-the-robot) (hardware)
+- [Install the necessary packages and software](#installation) (software)
+- [Configuring the robot](https://github.com/NTheuws/linorobot2_hardware/blob/rolling/README.md#installation) (hardware)
+- [testing and callibrating the motors](https://github.com/NTheuws/linorobot2_hardware/blob/rolling/README.md#calibration) (hardware)
+- [preparing the visualisation of the robot](#urdf) (software)
+- [testing the robot](#quickstart) (software)
+
+Throughout this you'll be moving between the 2 pages. When following the descriptions, it'll be made clear in case you have to continue elsewhere.
+
 ## Installation 
+
+Before you start with the installation, make sure to have gathered the hardware required and built the robot. If you've yet to do this, it can be found on the [hardware page](https://github.com/NTheuws/linorobot2_hardware). If this has been done you can continue below.
+
 This package requires ros-foxy, galactic, humble or rolling. If you haven't installed ROS2 yet, you can use this [installer](https://github.com/linorobot/ros2me) script that has been tested to work on x86 and ARM based dev boards ie. Raspberry Pi4/Nvidia Jetson Series. 
 
 ### 1. [Robot Computer](https://github.com/NTheuws/linorobot2_hardware#18-robot-computer) - linorobot2 Package
