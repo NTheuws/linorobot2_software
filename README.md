@@ -27,7 +27,7 @@ This project is split into 2 repositories, the software page (this one) and the 
 - [preparing the visualisation of the robot](#urdf) (software)
 - [testing the robot](#quickstart) (software)
 
-Throughout this you'll be moving between the 2 pages. When following the descriptions, it'll be made clear in case you have to continue elsewhere.
+Throughout this you'll be moving between the 2 pages. When following the descriptions, it'll be made clear in case you have to continue elsewhere. In case the next step doesnt refer to any other place, keep going through the steps from top to bottom.
 
 ## Installation 
 
